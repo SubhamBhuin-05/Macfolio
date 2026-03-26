@@ -72,9 +72,9 @@ export const Dock = ({ setWindowsState }) => {
         onClick={() => {
           window.open("https://www.linkedin.com/in/subham-bhuin", "_blank");
         }}
-        className="icon link"
+        className="icon linkedin"
       >
-        <img src="/doc-icons/link.svg" alt="" />
+        <img src="/doc-icons/linkedin.svg" alt="" />
       </div>
       <div
         onClick={() => [

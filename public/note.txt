@@ -1,7 +1,7 @@
 /**
  * @file: profile.config.ts
- * @author: Engineering Portfolio
- * @summary: A high-performance full-stack engineer.
+ * @author: Subham Bhuin
+ * @summary: Frontend-focused developer building interactive and scalable web applications.
  */
 
 // --------------------------------------------------
@@ -10,14 +10,23 @@
 
 const TECH_STACK = {
   frontend: [
-    "React.js",    // 100%
-    "TailwindCSS", // 90%
+    "React.js",
+    "JavaScript (ES6+)",
+    "HTML5",
+    "CSS3 / SCSS",
+    "Tailwind CSS"
   ],
   backend: [
-    "Node.js",     // 90%
-    "PostgreSQL",  // 85%
+    "Node.js",
+    "Express.js",
+    "MongoDB"
   ],
-  tools: ["Git", "Figma"]
+  tools: [
+    "Git",
+    "GitHub",
+    "Vite",
+    "VS Code"
+  ]
 };
 
 // --------------------------------------------------
@@ -25,8 +34,8 @@ const TECH_STACK = {
 // --------------------------------------------------
 
 const education = new Map<string, string>([
-  ["Narula Institute Of Technology", "Bachelors in Computer Science Engineering (7.9 CGPA)"],
-  ["Barchatra Ramkanai Institution", "Higher Secondary (94 percentile)"]
+  ["Narula Institute of Technology", "B.Tech in Computer Science Engineering (CGPA: 7.9)"],
+  ["Barchatra Ramkanai Institution", "Higher Secondary (94%)"]
 ]);
 
 
@@ -35,8 +44,13 @@ const education = new Map<string, string>([
 # TERMINAL OUTPUT
 # ---------------------------------------
 $ user --status
+> Role: Frontend Developer
+> Focus: Building interactive web applications
 > Status: Open to Opportunities
-> Location: Global / Remote
+> Location: India / Remote
+> Core Strength: UI + Logic + User Experience
+> Projects: Macfolio | Productivity Dashboard | Spotify Clone
 > Loading Assets... [||||||||||] 100%
 > Ready.
 ```
+

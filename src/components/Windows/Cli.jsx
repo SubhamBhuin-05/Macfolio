@@ -6,56 +6,62 @@ import "./cli.scss";
 const Cli = ({ windowName, setWindowsState }) => {
   const commands = {
     about: {
-      description: "About me",
+      description: "Learn about me",
       usage: "about",
       fn: () =>
-        "Hi! I’m Subham. I am a full-stack web developer passionate about building modern web applications.",
+        "Hi! I’m Subham Bhuin, a full-stack developer with a strong focus on frontend development. I build interactive and modern web applications with clean UI, smooth user experiences, and scalable logic. I’m continuously expanding my backend skills to become a well-rounded developer.",
     },
+
     projects: {
-      description: "View my projects",
+      description: "Check out my works",
       usage: "projects",
-      fn: () => `1. Portfolio Website - React + Vite
-2. E-commerce Platform - MERN Stack
-3. Task Management App - Next.js
-4. Real-time Chat App - Socket.io
-5. Data Dashboard - React + Chart.js`,
+      fn: () => `1. Macfolio - Interactive Portfolio (React, Vite)
+        2. Productivity Dashboard - JS + LocalStorage + APIs
+        3. Spotify UI Clone - HTML, CSS (Responsive Design)`,
     },
+
     skills: {
-      description: "List technical skills",
+      description: "Show technical skillset",
       usage: "skills",
-      fn: () => `Frontend: React, Vue.js, Vanilla JS, Sass, HTML/CSS
-                Backend: Node.js, Express, Python, Django
-                Databases: MongoDB, PostgreSQL, MySQL
-                Tools: Git, Docker, Webpack, Vite
-                Cloud: AWS, Azure, Heroku`,
+      fn: () => `Frontend: React, JavaScript (ES6+), HTML5, CSS3, SCSS, Tailwind
+      Backend: Node.js, Express.js
+      Database: MongoDB
+      Tools: Git, GitHub, Vite, VS Code`,
     },
+
     contact: {
-      description: "Get contact information",
+      description: "Get in touch",
       usage: "contact",
-      fn: () => `Email: ankur@example.com
-            Phone: +1 (555) 123-4567
-            Location: San Francisco, CA`,
+      fn: () => `Email: dev.subhambhuin@gmail.com
+      Location: India
+      LinkedIn: linkedin.com/in/subham-bhuin`,
     },
+
     github: {
       description: "Open GitHub profile",
       usage: "github",
       fn: () => {
-        window.open("https://github.com", "_blank");
+        window.open("https://github.com/SubhamBhuin-05", "_blank");
         return "Opening GitHub...";
       },
     },
+
     resume: {
-      description: "Download resume",
+      description: "Check out my resume",
       usage: "resume",
-      fn: () => "Resume download started...",
+      fn: () => {
+        window.open("/resume.pdf", "_blank"); // update path if needed
+        return "Opening resume...";
+      },
     },
+
     social: {
-      description: "View social media links",
+      description: "List social media links",
       usage: "social",
-      fn: () => `Twitter: @ankurdev
-LinkedIn: /in/ankurprajapati
-Portfolio: ankurprajapati.dev`,
+      fn: () => `GitHub: github.com/SubhamBhuin-05
+      LinkedIn: linkedin.com/in/subham-bhuin`,
     },
+
     echo: {
       description: "Echo a passed string",
       usage: "echo <string>",
@@ -63,19 +69,19 @@ Portfolio: ankurprajapati.dev`,
     },
   };
 
+  const commandList = Object.entries(commands)
+    .map(([name, cmd]) => `  • ${name.padEnd(10)} - ${cmd.description}`)
+    .join("\n");
+
   const welcomeMessage = `
 ╔════════════════════════════════════════╗
 ║     Welcome to My Portfolio CLI!       ║
 ╚════════════════════════════════════════╝
 
-Hello! 👋 Welcome to my interactive portfolio. You can navigate through my work experience, skills, and projects using terminal commands.
+Hello! 👋 Welcome to my interactive portfolio. You can navigate through my skills, and projects using terminal commands.
 
 Type 'help' to see all available commands, or try:
-  • about     - Learn about me
-  • skills    - View my technical skills
-  • projects  - Check out my work
-  • contact   - Get in touch
-
+  ${commandList}
 Happy exploring! 🚀
 `;
 
